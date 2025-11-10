@@ -1,7 +1,5 @@
 console.log("JS Connected!");
 
-
-
 async function searchProfile() {
     var userNameInput = document.getElementById("usernameInput").value.trim().toLowerCase();
 
@@ -26,11 +24,13 @@ async function searchProfile() {
         console.log(reposData);
 
         var reposDisplay = "";
-        reposData.slice(0, 5).forEach(repo => {
-            reposDisplay += `<div class="repo">
-            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            <br> ${repo.stargazers_count} </div>
-            ;`
+        reposData.forEach(repo => {
+            reposDisplay += `
+        <div class="repo">
+          <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+          <div class="stars">⭐ ${repo.stargazers_count}</div>
+        </div>
+      `;
         });
 
         document.getElementById("resultBox").innerHTML = `
@@ -50,5 +50,5 @@ async function searchProfile() {
     } catch (error) {
         document.getElementById("resultBox").innerHTML = "Error: " + error.message;
     }
-    
+
 };
