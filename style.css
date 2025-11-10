@@ -1,0 +1,160 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+h1 {
+  font-weight: 700;
+  color: #007bff;
+}
+
+.profile-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.profile-box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.profile-box h3 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.profile-box p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+#repos {
+  text-align: left;
+  margin-top: 15px;
+}
+
+#repos h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.repo {
+  background: #f1f3f6;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.repo:hover {
+  background: #e2e6ea;
+}
+
+.repo a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.repo a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .profile-box {
+    padding: 20px;
+  }
+
+  .profile-box img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* Container for all saved profiles */
+#savedProfilesContainer {
+  background: #fdfdfd;
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  max-height: 400px; /* Scrollable if many profiles */
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Each profile inside the saved profiles container */
+.saved-profile {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #f1f3f6;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.saved-profile:hover {
+  background: #e2e6ea;
+  transform: translateY(-2px);
+}
+
+/* Avatar inside saved profile */
+.saved-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+  margin-right: 15px;
+}
+
+/* Name and optional info */
+.saved-profile .profile-info h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.saved-profile .profile-info p {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Scrollbar styling for modern look */
+#savedProfilesContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#savedProfilesContainer::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+#savedProfilesContainer::-webkit-scrollbar-track {
+  background: #f1f3f6;
+  border-radius: 10px;
+}
